@@ -37,44 +37,23 @@ $cur_tab = $this->uri->segment(2)==''?'dashboard': $this->uri->segment(2);
               <li id="add_user"><a href="<?= base_url('admin/users/add'); ?>"><i class="fa fa-circle-o"></i> Add User</a></li>
               <li id="view_users" class=""><a href="<?= base_url('admin/users'); ?>"><i class="fa fa-circle-o"></i> View Users</a></li>
             </ul>
-          </li>
-          <li id="adminlte" class="treeview">
-          <a href="#">
-            <i class="fa fa-files-o"></i>
-            <span>Layout Options</span>
+		<li id="forms" class="treeview">
+          <a href="<?= base_url('adminlte/general_form'); ?>">
+            <i class="fa fa-edit"></i> <span>Stok Barang</span>
           </a>
         </li>
         <li id="charts" class="treeview">
-          <a href="#">
+          <a href="<?= base_url('adminlte/inline'); ?>">
             <i class="fa fa-pie-chart"></i>
-            <span>Charts</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li id="chartjs"><a href="<?= base_url('adminlte/chartjs'); ?>"><i class="fa fa-circle-o"></i> ChartJS</a></li>
-            <li id="morris"><a href="<?= base_url('adminlte/morris'); ?>"><i class="fa fa-circle-o"></i> Morris</a></li>
-            <li id="flot"><a href="<?= base_url('adminlte/flot'); ?>"><i class="fa fa-circle-o"></i> Flot</a></li>
-            <li id="inline"><a href="<?= base_url('adminlte/inline'); ?>"><i class="fa fa-circle-o"></i> Inline charts</a></li>
-          </ul>
+            <span>Pesanan Pembeli</span>
+		  </a>
         </li>
-         <li id="forms" class="treeview">
-          <a href="<?= base_url('adminlte/general_form'); ?>">
-            <i class="fa fa-edit"></i> <span>Forms</span>
+		</li>
+          <li id="adminlte" class="treeview">
+          <a href="<?= base_url('adminlte/data_table'); ?>">
+            <i class="fa fa-files-o"></i>
+            <span>Laporan</span>
           </a>
-        </li>
-        <li id="tables" class="treeview">
-          <a href="#">
-            <i class="fa fa-table"></i> <span>Tables</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li id="simple-tables"><a href="<?= base_url('adminlte/simple_table'); ?>"><i class="fa fa-circle-o"></i> Simple tables</a></li>
-            <li id="data-tables"><a href="<?= base_url('adminlte/data_table'); ?>"><i class="fa fa-circle-o"></i> Data tables</a></li>
-          </ul>
         </li>
       </ul>
 

@@ -79,27 +79,9 @@
       
       <div class="row">
         <section class="col-lg-7 connectedSortable">
-          
-              <div id="revenue-chart" ></div>
-              <div id="sales-chart" ;"></div>
-            
-        </section>
-        <section class="col-lg-5 connectedSortable">
-          <div class="box box-solid bg-teal-gradient">
-            
-            <div class="box-body border-radius-none">
+          <div id="revenue-chart">.</div>
+              <div id="sales-chart">.</div>
               <div class="chart" id="line-chart" style="height: 250px;"></div>
-            </div>
-            <div class="box-footer no-border">
-              <div class="row">
-                
-              </div>
-            </div>
-          </div>
-          <div class="box box-solid bg-green-gradient">
-              </div>
-            </div>
-          </div>
         </section>
       </div>
   
