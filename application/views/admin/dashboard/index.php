@@ -78,11 +78,28 @@
       </div>
       
       <div class="row">
-        <section class="col-lg-7 connectedSortable">
-          <div ></div>
-              
-              <div style="height: 305px;"></div>
-        </section>
+		<div class="box-body table-responsive">
+		<table id="example1" class="table table-bordered table-striped">
+        <thead>
+        <tr>
+          <th>Judul</th>
+          <th style="width:30%;">Gambar</th>
+          <th>Tanggal</th>
+          <th style="width: 150px;" class="text-right">Option</th>
+        </tr>
+        </thead>
+        <tbody>
+          <?php foreach($all_artikel as $row): ?>
+          <tr>
+            <td><?= $row['JUDUL']; ?></td>
+            <td><img class="img-responsive" src="<?php echo base_url().'assests/img/'.$row['GAMBAR'];?>"></td>
+            <td><?= $row['TGL_ARTIKEL']; ?></td>
+            <td class="text-right"><a href="<?= base_url('admin/artikel/edit/'.$row['ID_ARTIKEL']); ?>" class="btn btn-info btn-flat">Edit</a><a href="<?= base_url('admin/artikel/del/'.$row['ID_ARTIKEL']); ?>" class="btn btn-danger btn-flat">Delete</a></td>
+          </tr>
+          <?php endforeach; ?>
+        </tbody>
+		</table>
+		</div>
       </div>
   
 

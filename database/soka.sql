@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
--- https://www.phpmyadmin.net/
+-- version 4.5.1
+-- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 20 Mei 2018 pada 05.02
--- Versi Server: 10.1.26-MariaDB
--- PHP Version: 7.1.8
+-- Generation Time: May 20, 2018 at 05:55 PM
+-- Server version: 10.1.16-MariaDB
+-- PHP Version: 7.0.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -19,34 +17,35 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `jamur`
+-- Database: `soka`
 --
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `artikel`
+-- Table structure for table `artikel`
 --
 
 CREATE TABLE `artikel` (
   `ID_ARTIKEL` int(11) NOT NULL,
   `ISI` text,
   `GAMBAR` varchar(20) DEFAULT NULL,
-  `JUDUL` varchar(30) DEFAULT NULL
+  `JUDUL` varchar(30) DEFAULT NULL,
+  `TGL_ARTIKEL` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `artikel`
+-- Dumping data for table `artikel`
 --
 
-INSERT INTO `artikel` (`ID_ARTIKEL`, `ISI`, `GAMBAR`, `JUDUL`) VALUES
-(1, 'Cara Budidaya Jamur', 'B1.jpg', 'Cara Budidaya Jamur'),
-(2, 'Memasak Jamur', 'M2.jpg', 'Cara Memasak Jamur');
+INSERT INTO `artikel` (`ID_ARTIKEL`, `ISI`, `GAMBAR`, `JUDUL`, `TGL_ARTIKEL`) VALUES
+(1, 'Cara Budidaya Jamur', 'bakso.jpg', 'Cara Budidaya Jamur', '2018-05-20 14:59:41'),
+(2, 'Memasak Jamur', 'sate.jpg', 'Cara Memasak Jamur', '2018-05-20 14:59:41');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `barang`
+-- Table structure for table `barang`
 --
 
 CREATE TABLE `barang` (
@@ -57,7 +56,7 @@ CREATE TABLE `barang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `barang`
+-- Dumping data for table `barang`
 --
 
 INSERT INTO `barang` (`ID_BARANG`, `NAMA_BARANG`, `STOK`, `HARGA`) VALUES
@@ -67,7 +66,7 @@ INSERT INTO `barang` (`ID_BARANG`, `NAMA_BARANG`, `STOK`, `HARGA`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pesanan`
+-- Table structure for table `pesanan`
 --
 
 CREATE TABLE `pesanan` (
@@ -81,7 +80,7 @@ CREATE TABLE `pesanan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `pesanan`
+-- Dumping data for table `pesanan`
 --
 
 INSERT INTO `pesanan` (`ID_PESAN`, `JUMLAH_PESANAN`, `TOTAL`, `TGL_KIRIM`, `TGL_PESAN`, `ID_BARANG`, `ID_USER`) VALUES
@@ -90,7 +89,7 @@ INSERT INTO `pesanan` (`ID_PESAN`, `JUMLAH_PESANAN`, `TOTAL`, `TGL_KIRIM`, `TGL_
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
@@ -104,7 +103,7 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `user`
+-- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`ID_USER_`, `NAMA`, `ALAMAT`, `NO_HP`, `EMAIL`, `PASSWORD`, `LEVEL`) VALUES
@@ -142,16 +141,15 @@ ALTER TABLE `user`
   ADD PRIMARY KEY (`ID_USER_`);
 
 --
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+-- Constraints for dumped tables
 --
 
 --
--- Ketidakleluasaan untuk tabel `pesanan`
+-- Constraints for table `pesanan`
 --
 ALTER TABLE `pesanan`
   ADD CONSTRAINT `pesanan_ibfk_1` FOREIGN KEY (`ID_BARANG`) REFERENCES `barang` (`ID_BARANG`),
   ADD CONSTRAINT `pesanan_ibfk_2` FOREIGN KEY (`ID_USER`) REFERENCES `user` (`ID_USER_`);
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
