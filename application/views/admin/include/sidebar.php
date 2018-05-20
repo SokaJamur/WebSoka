@@ -27,16 +27,10 @@ $cur_tab = $this->uri->segment(2)==''?'dashboard': $this->uri->segment(2);
 
       <ul class="sidebar-menu">
         <li id="users" class="treeview">
-            <a href="#">
+            <a href="<?= base_url('admin/users'); ?>">
               <i class="fa fa-dashboard"></i> <span>Users</span>
-              <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-            </a>
-            <ul class="treeview-menu">
-              <li id="add_user"><a href="<?= base_url('admin/users/add'); ?>"><i class="fa fa-circle-o"></i> Add User</a></li>
-              <li id="view_users" class=""><a href="<?= base_url('admin/users'); ?>"><i class="fa fa-circle-o"></i> View Users</a></li>
-            </ul>
+             </a>
+            
 		<li id="forms" class="treeview">
           <a href="<?= base_url('adminlte/general_form'); ?>">
             <i class="fa fa-edit"></i> <span>Stok Barang</span>

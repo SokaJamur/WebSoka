@@ -79,9 +79,9 @@
       
       <div class="row">
         <section class="col-lg-7 connectedSortable">
-          <div id="revenue-chart">.</div>
-              <div id="sales-chart">.</div>
-              <div class="chart" id="line-chart" style="height: 250px;"></div>
+          <div ></div>
+              
+              <div style="height: 305px;"></div>
         </section>
       </div>
   

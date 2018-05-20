@@ -34,11 +34,11 @@
                     <div class="caption">
                         <h4>Masukan Email dan Password</h4>
                     </div>
-                    <?php echo form_open(base_url('admin/auth/login'), 'class="login-form" '); ?>
+                    <?php echo form_open(base_url('admin/Login'), 'class="login-form" '); ?>
                         <div class="input-group">
                             <input type="email" name="email" id="email" class="form-control" placeholder="Email" >
                             <input type="password" name="password" id="password" class="form-control" placeholder="Password" >
-                            <input type="submit" name="submit" id="submit" class="form-control" value="Masuk">
+                            <input type="submit" name="btn_log" id="submit" class="form-control" value="Masuk">
                         </div>
                     <?php echo form_close(); ?>
                 </div>

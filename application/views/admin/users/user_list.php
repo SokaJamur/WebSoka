@@ -11,23 +11,23 @@
       <table id="example1" class="table table-bordered table-striped ">
         <thead>
         <tr>
-          <th>First Name</th>
-          <th>Last Name</th>
+          <th>Nama</th>
+          <th>Alamat</th>
+          <th>No Hp</th>
           <th>Email</th>
-          <th>Mobile No.</th>
-          <th>Role</th>
+          <th>Level</th>
           <th style="width: 150px;" class="text-right">Option</th>
         </tr>
         </thead>
         <tbody>
           <?php foreach($all_users as $row): ?>
           <tr>
-            <td><?= $row['firstname']; ?></td>
-            <td><?= $row['lastname']; ?></td>
-            <td><?= $row['email']; ?></td>
-            <td><?= $row['mobile_no']; ?></td>
-            <td><span class="btn btn-primary btn-flat btn-xs"><?= ($row['is_admin'] == 1)? 'admin': 'member'; ?><span></td>
-            <td class="text-right"><a href="<?= base_url('admin/users/edit/'.$row['id']); ?>" class="btn btn-info btn-flat <?= ($row['is_admin'] == 1)? 'disabled': ''?>">Edit</a><a href="<?= base_url('admin/users/del/'.$row['id']); ?>" class="btn btn-danger btn-flat <?= ($row['is_admin'] == 1)? 'disabled': ''?>">Delete</a></td>
+            <td><?= $row['NAMA']; ?></td>
+            <td><?= $row['ALAMAT']; ?></td>
+            <td><?= $row['NO_HP']; ?></td>
+            <td><?= $row['EMAIL']; ?></td>
+            <td><span class="btn btn-primary btn-flat btn-xs"><?= ($row['LEVEL'] == 'admin')? 'admin': 'user'; ?><span></td>
+            <td class="text-right"><a href="<?= base_url('admin/users/edit/'.$row['ID_USER_']); ?>" class="btn btn-info btn-flat <?= ($row['LEVEL'] == 'admin')? 'disabled': ''?>">Edit</a><a href="<?= base_url('admin/users/del/'.$row['ID_USER_']); ?>" class="btn btn-danger btn-flat <?= ($row['LEVEL'] == 'admin')? 'disabled': ''?>">Delete</a></td>
           </tr>
           <?php endforeach; ?>
         </tbody>

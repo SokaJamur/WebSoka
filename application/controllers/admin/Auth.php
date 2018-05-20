@@ -35,8 +35,8 @@
 					$result = $this->auth_model->login($data);
 					if ($result == TRUE) {
 						$admin_data = array(
-							'admin_id' => $result['id'],
-						 	'name' => $result['username'],
+							'admin_id' => $result['LEVEL'],
+						 	'name' => $result['NAMA'],
 						 	'is_admin_login' => TRUE
 						);
 						$this->session->set_userdata($admin_data);
