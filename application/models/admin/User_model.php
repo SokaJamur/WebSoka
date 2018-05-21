@@ -1,11 +1,6 @@
 <?php
 	class User_model extends CI_Model{
 
-		public function add_user($data){
-			$this->db->insert('user', $data);
-			return true;
-		}
-
 		public function get_all_users(){
 			$query = $this->db->get('user');
 			return $result = $query->result_array();

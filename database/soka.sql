@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 20, 2018 at 05:55 PM
+-- Generation Time: May 21, 2018 at 05:04 PM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 7.0.9
 
@@ -39,8 +39,13 @@ CREATE TABLE `artikel` (
 --
 
 INSERT INTO `artikel` (`ID_ARTIKEL`, `ISI`, `GAMBAR`, `JUDUL`, `TGL_ARTIKEL`) VALUES
-(1, 'Cara Budidaya Jamur', 'bakso.jpg', 'Cara Budidaya Jamur', '2018-05-20 14:59:41'),
-(2, 'Memasak Jamur', 'sate.jpg', 'Cara Memasak Jamur', '2018-05-20 14:59:41');
+(2, 'Bahan-bahan	\r\nBahan Sate :\r\n1/4 Kg Jamur Tiram Putih\r\nBumbu Sate :\r\n1/4 Sdt ketumbar bubuk\r\n2 Siung bawang putih (dihaluskan)\r\n4 Sdm kecap manis\r\n2 Sdm Minyak Sayur\r\nSecukupnya Garam&Penyedap Rasa\r\nLangkah	\r\nRebus Jamur Tiram Sebentar,, tiriskan lalu di suwir-suwir&tusuk menggunakan tusuk sate\r\n\r\nCampurkan Semua Bumbu Sate,, Lalu Rendam Jamur (yg sudah ditusuk) kurang lebih 10menit agar meresap \r\nSiapkan Panggangan / bisa juga menggunakan teflon bakar sampai matang,, setelah Matang Bisa Di Celupkan Ke dalam sambal kecap Atau Di Cocol Saus Saat Di Santap', 'sate.jpg', 'Sate Jamur Tiram', '2018-05-21 12:40:41'),
+(3, 'Bahan dan bumbu bakwan jamur tiram : \r\n250 gram jamur tiram, suwir-suwir lalu rajang kasar potong-potong kecil\r\n2 batang daun bawang, iris-iris tipis\r\n1 buah cabe merah juga diiris tipis\r\n200 gram tepung terigu segitiga\r\n1 butir telur\r\n2 siung bawang putih, haluskan\r\n1 sdt garam\r\n½ sdt lada bubuk\r\n½ sdt kaldu bubuk\r\n300 ml air\r\nsecukupnya minyak untuk menggoreng\r\nCARA MEMBUAT BAKWAN JAMUR :\r\nCuci bersih jamur tiram lalu peras agar kering, selanjutnya suwir-suwir atau sobek-sobek kemudian rajang kasar (potong kecil-kecil).\r\nSiapkan sebuah wadah, campurkan semua bahan kecuali minyak goreng lalu aduk saja dengan sendok makan hingga adonan rata.\r\nPanaskan minyak goreng yang banyak atau secukupnya dalam wajan, ambil adonan menggunakan sendok sayur lalu tuang ke bagian pinggir wajan sambil diratakan (dilebarkan) agar tipis dan berbentuk sebelum adonan turun perlahan dan masuk ke dalam minyak. Adonan ditipiskan supaya hasilnya benar-benar renyah (kalau menggunakan wajan biasa dan adonan menempel, dapat dibantu dengan susuk/sutil atau sendok penggorengan).\r\nGoreng hingga matang kuning keemasan, angkat dan tiriskan dari minyak, kemudian bakwan jamur tiram yang enak dan renyah sudah siap disajikan.', 'bakwan.jpg', 'Bakwan Jamur Tiram', '2018-05-21 12:35:45'),
+(4, 'Resep Membuat Pepes Jamur Tiram Enak Pedas\r\n\r\nBahan-bahan yang harus disiapkan :\r\n200 gram jamur tiram, suwir-suwir, cuci bersih, peras, tiriskan\r\n3 siung bawang putih, iris tipis\r\n5 butir bawang merah, iris tipis\r\n10 buah cabe rawit,  potong-potong (Bisa ditambahkan /dikurangi sesuai selera)\r\n2 buah cabe merah besar, potong serong tipis\r\n2 buah tomat merah, cincang kasar\r\n2 butir telur, kocok\r\n2 batang bawang daun polong, iris halus\r\n4 lembar daun salam\r\nGaram, secukupnya\r\nGula secukupnya\r\nDaun pisang dan tusuk gigi, secukupnya\r\n\r\nCara Memasak Pepes Jamur Tiram Enak :\r\nSiapkan wadah, masukkan semua bahan, kecuali daun salam, dan telur kemudian aduk sampai tercampur rata .\r\nTambahkan telur ayam yang sudah dikocok, aduk lagi hingga rata sempurna.\r\nAmbil selembar daun pisang, letakkan selembar daun salam, lalu jamur yang sudah dibumbui diatasnya, setelah itu gulung daun pisang beberapa kali hingga bahan pepes jamur terbungkus rapat, kemudian semat kedua ujungnya dengan tusuk gigi, lakukan sampai habis.\r\nSelanjutnya kukus selama 30 menit hingga matang, angkat, dinginkan, kemudian bakar hingga harum.\r\nPepes jamur tiram siap disajikan dan dinikmati.', 'pepes.jpg', 'Pepes Jamur Tiram', '2018-05-21 12:39:19'),
+(5, 'BAHAN\r\n150 gr jamur tiram putih\r\n\r\n3 siung bawang putih\r\n\r\n1 lembar daun salam\r\n\r\n1 ruas lengkuas\r\n\r\n1 ruas jahe\r\n\r\n1 batang sereh\r\n\r\nAir secukupnya\r\n\r\ngaram\r\n\r\ngula\r\n\r\nlada putih\r\n\r\nINSTRUKSI\r\nSobek – sobek jamur sesuai keinginan\r\n\r\nSlice bawang putih\r\n\r\nGeprek lengkuas, jahe dan sereh lalu saute hingga harum dan tambahkan bawang putih dan daun salam\r\n\r\nMasukan jamur aduk – aduk sebentar dan tambahkan air\r\n\r\nMasak hingga matang dan tambahkan garam , gula dan lada secukupnya\r\n\r\nSiap disajikan', 'tumis.png', 'Tumis Jamur Tiram', '2018-05-21 12:43:51'),
+(6, 'Bahan-Bahan :\r\nJamur tiram segar 2.5 kg\r\nTepung beras 1/2 kg\r\nTeung terigu 1 kg\r\nTeung maizena 200 g\r\nMinyak goreng 2 liter\r\nBumbu yang dihaluskan (bawang putih goreng, garam, dana lada)\r\n\r\nCara Membuat :\r\n1. Jamur tiram segar dicuci bersih, dipotong-potong kemudian dikukus selama 10 menit dan peras airnya\r\n2. Jamur dicampur dengan bumbu yang sudah dihaluskan\r\n3. Tepung beras, tepung teigu dan tepung maizena dicampur hingga rata\r\n4. Jamur dimasukkan dalam adonan tepung, kemudian diayak agar terpisah dengan tepungnya\r\n5. Jamur yang terpisah dari tepungnya kemudian digoreng hingga kering\r\n6. Tiriskan dan siap dinikmati', 'krispi2.jpg', 'Jamur Tiram Krispi', '2018-05-21 12:56:18'),
+(7, 'snbkjsdlnflk', 'nugget.jpg', 'Nugget Jamur Tiram', '2018-05-21 12:57:11'),
+(8, 'dsffklewklfeklwnfiwe', 'bakso.jpg', 'Bakso Jamur Tiram', '2018-05-21 14:09:10');
 
 -- --------------------------------------------------------
 
@@ -140,6 +145,15 @@ ALTER TABLE `pesanan`
 ALTER TABLE `user`
   ADD PRIMARY KEY (`ID_USER_`);
 
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `artikel`
+--
+ALTER TABLE `artikel`
+  MODIFY `ID_ARTIKEL` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- Constraints for dumped tables
 --

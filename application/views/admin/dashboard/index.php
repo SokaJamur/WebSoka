@@ -13,14 +13,11 @@
 
 
 <section class="content">
-      <!-- Small boxes (Stat box) -->
       <div class="row">
         <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
           <div class="small-box bg-yellow">
             <div class="inner">
               <h3>User</h3>
-
               <p>SOKA Jamur</p>
             </div>
             <div class="icon">
@@ -29,63 +26,56 @@
             <a href="<?= base_url('admin/users'); ?>" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
-       <!-- ./col -->
-
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-aqua">
-            <div class="inner">
-              <h3>Pesan</h3>
-
-              <p>SOKA Jamur</p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-bag"></i>
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
+	   <div class="col-lg-3 col-xs-6">
           <div class="small-box bg-red">
             <div class="inner">
               <h3>Barang</h3>
-
               <p>SOKA Jamur</p>
             </div>
             <div class="icon">
               <i class="ion ion-pie-graph"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="<?= base_url('adminlte/general_form'); ?>" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
-        <!-- ./col -->
         <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
+          <div class="small-box bg-aqua">
+            <div class="inner">
+              <h3>Pesan</h3>
+              <p>SOKA Jamur</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-bag"></i>
+            </div>
+            <a href="<?= base_url('adminlte/inline'); ?>" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-xs-6">
           <div class="small-box bg-green">
             <div class="inner">
               <h3>Laporan<sup style="font-size: 20px"></sup></h3>
-
               <p>SOKA Jamur</p>
             </div>
             <div class="icon">
               <i class="ion ion-stats-bars"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="<?= base_url('adminlte/data_table'); ?>" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
       </div>
       
       <div class="row">
 		<div class="box-body table-responsive">
+		
 		<table id="example1" class="table table-bordered table-striped">
+		<h1>ARTIKEL</h1> 
+		<a style="width:15%;" href="<?= base_url('admin/Dashboard/add'); ?>" class="btn btn-info bg-purple"> Tambah Artikel <i class="fa fa-plus-square"></i></a>
         <thead>
         <tr>
           <th>Judul</th>
-          <th style="width:30%;">Gambar</th>
+          <th style="width:20%;">Gambar</th>
           <th>Tanggal</th>
-          <th style="width: 150px;" class="text-right">Option</th>
+          <th style="width: 150px;" class="text-center">Option</th>
         </tr>
         </thead>
         <tbody>
@@ -94,7 +84,7 @@
             <td><?= $row['JUDUL']; ?></td>
             <td><img class="img-responsive" src="<?php echo base_url().'assests/img/'.$row['GAMBAR'];?>"></td>
             <td><?= $row['TGL_ARTIKEL']; ?></td>
-            <td class="text-right"><a href="<?= base_url('admin/artikel/edit/'.$row['ID_ARTIKEL']); ?>" class="btn btn-info btn-flat">Edit</a><a href="<?= base_url('admin/artikel/del/'.$row['ID_ARTIKEL']); ?>" class="btn btn-danger btn-flat">Delete</a></td>
+            <td class="text-center"><a href="<?= base_url('admin/Dashboard/edit/'.$row['ID_ARTIKEL']); ?>" class="btn btn-info btn-flat">Edit</a><a href="<?= base_url('admin/Dashboard/del/'.$row['ID_ARTIKEL']); ?>" class="btn btn-danger btn-flat">Delete</a></td>
           </tr>
           <?php endforeach; ?>
         </tbody>

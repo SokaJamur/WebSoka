@@ -28,27 +28,26 @@ $cur_tab = $this->uri->segment(2)==''?'dashboard': $this->uri->segment(2);
       <ul class="sidebar-menu">
         <li id="users" class="treeview">
             <a href="<?= base_url('admin/users'); ?>">
-              <i class="fa fa-dashboard"></i> <span>Users</span>
-             </a>
-            
+            <i class="ion ion-person"></i> <span>Users</span>
+            </a>
+		</li>
 		<li id="forms" class="treeview">
           <a href="<?= base_url('adminlte/general_form'); ?>">
-            <i class="fa fa-edit"></i> <span>Stok Barang</span>
+            <i class="fa fa-pie-chart"></i> <span>Stok Barang</span>
           </a>
         </li>
         <li id="charts" class="treeview">
           <a href="<?= base_url('adminlte/inline'); ?>">
-            <i class="fa fa-pie-chart"></i>
+            <i class="ion ion-bag"></i>
             <span>Pesanan Pembeli</span>
 		  </a>
         </li>
-		</li>
-          <li id="adminlte" class="treeview">
+        <li id="adminlte" class="treeview">
           <a href="<?= base_url('adminlte/data_table'); ?>">
-            <i class="fa fa-files-o"></i>
+            <i class="ion ion-stats-bars"></i>
             <span>Laporan</span>
           </a>
-        </li>
+		</li>
       </ul>
 
 
