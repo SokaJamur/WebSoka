@@ -34,7 +34,7 @@
               <div class="form-group">
                 <label for="gambar" class="col-sm-2 control-label">Gambar</label>
                 <div class="col-sm-9">
-                  <input type="file" name="gambar" class="form-control" id="gambar" placeholder="">
+                  <input type="file" name="gambar" class="file" id="gambar" placeholder="">
                 </div>
               </div>
               <div class="form-group">
