@@ -16,10 +16,10 @@
 		
 		public function edit($id = 0){
 			if($this->input->post('submit')){
-				$this->form_validation->set_rules('NAMA', 'Nama');
-				$this->form_validation->set_rules('ALAMAT', 'Alamat');
-				$this->form_validation->set_rules('EMAIL', 'Email');
-				$this->form_validation->set_rules('NO_HP', 'No HP');
+				$this->form_validation->set_rules('nama', 'Nama', 'trim|required');
+				$this->form_validation->set_rules('alamat', 'Alamst', 'trim|required');
+				$this->form_validation->set_rules('email', 'Email', 'trim|required');
+				$this->form_validation->set_rules('no_hp', 'No HP', 'trim|required');
 
 				if ($this->form_validation->run() == FALSE) {
 					$data['user'] = $this->user_model->get_user_by_id($id);
@@ -28,10 +28,10 @@
 				}
 				else{
 					$data = array(
-						'NAMA' => $this->input->post('NAMA'),
-						'ALAMAT' => $this->input->post('ALAMAT'),
-						'EMAIL' => $this->input->post('EMAIL'),
-						'NO_HP' => $this->input->post('NO_HP')
+						'NAMA' => $this->input->post('nama'),
+						'ALAMAT' => $this->input->post('alamat'),
+						'EMAIL' => $this->input->post('email'),
+						'NO_HP' => $this->input->post('no_hp')
 					);
 					$data = $this->security->xss_clean($data);
 					$result = $this->user_model->edit_user($data, $id);
