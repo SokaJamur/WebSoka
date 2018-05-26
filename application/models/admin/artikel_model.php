@@ -6,7 +6,6 @@ class artikel_model extends CI_Model{
 	}
 	
 	function upload($data){
-		$hsl=$this->db->query("INSERT INTO artikel (JUDUL,ISI,GAMBAR) VALUES ('$jdl','$isi','$gambar')");
 		$this->db->insert('artikel', $data);
 		return true;
 	}

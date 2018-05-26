@@ -16,14 +16,13 @@
 		
 		public function add(){
 		if($this->input->post('submit')){
-			$config = ['upload_path' => './assests/img/', 
-			'allowed_types' => 'jpg|png|jpeg',
-			];
+			$config['upload_path'] = './assests/img/'; 
+			$config['allowed_types'] = 'jpg|png|jpeg';
+			$config['encrypt_name'] = TRUE;
 			
-			//$this->load->library('upload', $config);
 			$this->upload->initialize($config);
 			if(!empty($_FILES['gambar']['name'])){
-	        if ($this->upload->do_upload()){
+	        if ($this->upload->do_upload('gambar')){
 	        	$gbr = $this->upload->data();
 	            //Compress Image
 	            $config['image_library']='gd2';
@@ -51,7 +50,7 @@
 					$data = array(
 						'JUDUL' => $this->input->post('judul'),
 						'ISI' => $this->input->post('isi'),
-						'GAMBAR' => $this->input->post('gambar')
+						'GAMBAR' => $this->input->post('artikel')
 					);
 					$data = $this->security->xss_clean($data);
 					$result = $this->artikel_model->upload($data);
