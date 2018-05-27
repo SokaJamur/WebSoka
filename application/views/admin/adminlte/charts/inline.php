@@ -31,18 +31,18 @@
           <th>Barang</th>
           <th>Jumlah</th>
           <th>Total</th>
-          <th style="width: 150px;" class="text-right">Option</th>
+          <th>Option</th>
         </tr>
         </thead>
         <tbody>
           <?php foreach($pesan as $row): ?>
           <tr>
-            <td><?= $row['ID_USER']; ?></td>
-            <td><?= $row['TGL_PESAN']; ?></td>
-            <td><?= $row['ID_BARANG']; ?></td>
+            <td><?= $row['NAMA'];?></td>
+            <td><?= $row['ALAMAT']; ?></td>
+            <td><?= $row['NAMA_BARANG']; ?></td>
             <td><?= $row['JUMLAH_PESANAN']; ?></td>
 			<td><?= $row['TOTAL']; ?></td>
-      <!--      <td class="text-right"><a href="<?//= base_url('admin/users/edit/'.$row['ID_PESANAN']); ?>" class="btn btn-info btn-flat <?//= ($row['LEVEL'] == 'admin')? 'disabled': ''?>">Detail</a></td> -->
+			<td class="text-center"><a href="<?//= base_url('admin/users/edit/'.$row['ID_PESANAN']); ?>" class="btn btn-info btn-flat <?//= ($row['LEVEL'] == 'admin')? 'disabled': ''?>">Detail</a></td>
           </tr>
           <?php endforeach; ?>
         </tbody>

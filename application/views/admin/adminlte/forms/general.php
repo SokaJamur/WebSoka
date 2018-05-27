@@ -28,7 +28,7 @@
                   <label for="nama" class="col-sm-2 control-label">Nama</label>
 
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="nama_jamur" placeholder>
+                    <input type="text" disabled value="Jamur" class="form-control" id="nama_jamur" placeholder>
                   </div>
                 </div>
                 <div class="form-group">
@@ -42,7 +42,7 @@
                   <label for="harga" class="col-sm-2 control-label">Harga</label>
 
                   <div class="col-sm-10">
-                    <input type="number" class="form-control" id="harga_jamur" placeholder>
+                    <input type="number" min="0" oninput="validity.valid||(value='');" class="form-control" id="harga_jamur" placeholder>
                   </div>
                 </div>
               </div>
@@ -92,7 +92,7 @@
                   <label for="nama" class="col-sm-2 control-label">Nama</label>
 
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="nama_baglog" placeholder>
+                    <input type="text" disabled value="Baglog" class="form-control" id="nama_baglog" placeholder>
                   </div>
                 </div>
                 <div class="form-group">
@@ -106,7 +106,7 @@
                   <label for="harga" class="col-sm-2 control-label">Harga</label>
 
                   <div class="col-sm-10">
-                    <input type="number" class="form-control" id="harga_baglog" placeholder>
+                    <input type="number" min="0" oninput="validity.valid||(value='');" class="form-control" id="harga_baglog" placeholder>
                   </div>
                 </div>
               </div>
@@ -129,7 +129,7 @@
 			</tr>
 			</thead>
 			<tbody>
-			<?php foreach($barang_jamur as $row): ?>
+			<?php foreach($barang_baglog as $row): ?>
 			<tr>
 				<td><?= $row['NAMA_BARANG']; ?></td>
 				<td><?= $row['STOK']; ?></td>

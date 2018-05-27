@@ -11,7 +11,8 @@
 			redirect(base_url('admin/auth'));
 		}
 		public function general_form(){
-			$data['barang_jamur'] =  $this->barang_model->get_barang();
+			$data['barang_jamur'] =  $this->barang_model->get_jamur();
+			$data['barang_baglog'] =  $this->barang_model->get_baglog();
 			$data['view'] = 'admin/adminlte/forms/general';
 			$this->load->view('admin/layout', $data);
 		}
