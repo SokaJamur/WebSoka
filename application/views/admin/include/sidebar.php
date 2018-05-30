@@ -32,18 +32,18 @@ $cur_tab = $this->uri->segment(2)==''?'dashboard': $this->uri->segment(2);
             </a>
 		</li>
 		<li id="forms" class="treeview">
-          <a href="<?= base_url('adminlte/general_form'); ?>">
+          <a href="<?= base_url('admin/barang'); ?>">
             <i class="fa fa-pie-chart"></i> <span>Stok Barang</span>
           </a>
         </li>
         <li id="charts" class="treeview">
-          <a href="<?= base_url('adminlte/inline'); ?>">
+          <a href="<?= base_url('admin/pesanan'); ?>">
             <i class="ion ion-bag"></i>
             <span>Pesanan Pembeli</span>
 		  </a>
         </li>
         <li id="adminlte" class="treeview">
-          <a href="<?= base_url('adminlte/data_table'); ?>">
+          <a href="<?= base_url('admin/laporan'); ?>">
             <i class="ion ion-stats-bars"></i>
             <span>Laporan</span>
           </a>

@@ -23,30 +23,42 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-              <table id="example1" class="table table-bordered table-striped">
-                <thead>
-                <tr>
-                  <th>Rendering engine</th>
-                  <th>Browser</th>
-                  <th>Platform(s)</th>
-                  <th>Engine version</th>
-                  <th>CSS grade</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet Explorer 4.0</td>
-                  <td>Win 95+</td>
-                  <td> 4</td>
-                  <td>X</td>
-                </tr>
-                </tbody>
-              </table>
+        <table id="example1" class="table table-bordered table-striped ">
+        <thead>
+        <tr>
+		  <th>No</th>
+          <th>Nama User</th>
+          <th>Alamat</th>
+		  <th>No HP</th>
+          <th>Barang</th>
+          <th>Jumlah</th>
+		  <th>Tgl Pesan</th>
+		  <th>Tgl Kirim</th>
+          <th>Total</th>
+		  <th>Status</th>
+        </tr>
+        </thead>
+        <tbody>
+          <?php foreach($lapor as $row): ?>
+          <tr>
+			<td>no</td>
+            <td><?= $row['NAMA'];?></td>
+            <td><?= $row['ALAMAT']; ?></td>
+			<td><?= $row['NO_HP']; ?></td>
+            <td><?= $row['NAMA_BARANG']; ?></td>
+            <td><?= $row['JUMLAH_PESANAN']; ?></td>
+			<td><?= $row['TGL_PESAN']; ?></td>
+			<td><?= $row['TGL_KIRIM']; ?></td>
+			<td><?= $row['TOTAL']; ?></td>
+			<td>Status</td>
+          </tr>
+          <?php endforeach; ?>
+        </tbody>
+       
+      </table>
             </div>
-            <!-- /.box-body -->
           </div>
-          <!-- /.box -->
+		  TOTAL PENJUALAN
         </div>
         <!-- /.col -->
       </div>

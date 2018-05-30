@@ -10,6 +10,7 @@
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
         <li><a href="#">Pesanan Pembeli</a></li>
+		<li><a href="#">Detail Pesanan</a></li>
       </ol>
     </section>
 
@@ -19,30 +20,40 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Pesanan Soka Jamur</h3>
+              <h3 class="box-title">Detail Pesanan</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-              <table id="example1" class="table table-bordered table-striped ">
+			
+			
+        <table id="example1" class="table table-bordered table-striped ">
         <thead>
         <tr>
           <th>Nama User</th>
           <th>Alamat</th>
+		  <th>No HP</th>
           <th>Barang</th>
           <th>Jumlah</th>
+		  <th>Tgl Pesan</th>
+		  <th>Tgl Kirim</th>
           <th>Total</th>
+		  <th>Status</th>
           <th>Option</th>
         </tr>
         </thead>
         <tbody>
-          <?php foreach($pesan as $row): ?>
+          <?php foreach($detail as $row): ?>
           <tr>
             <td><?= $row['NAMA'];?></td>
             <td><?= $row['ALAMAT']; ?></td>
+			<td><?= $row['NO_HP']; ?></td>
             <td><?= $row['NAMA_BARANG']; ?></td>
             <td><?= $row['JUMLAH_PESANAN']; ?></td>
+			<td><?= $row['TGL_PESAN']; ?></td>
+			<td><?= $row['TGL_KIRIM']; ?></td>
 			<td><?= $row['TOTAL']; ?></td>
-			<td class="text-center"><a href="<?//= base_url('admin/users/edit/'.$row['ID_PESANAN']); ?>" class="btn btn-info btn-flat <?//= ($row['LEVEL'] == 'admin')? 'disabled': ''?>">Detail</a></td>
+			<td>Status</td>
+			<td class="text-center"><a href="<?= base_url('admin/pesanan/'); ?>" class="btn btn-info btn-flat">Tutup</a></td>
           </tr>
           <?php endforeach; ?>
         </tbody>
