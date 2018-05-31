@@ -22,6 +22,7 @@
       <table id="example1" class="table table-bordered table-striped ">
         <thead>
         <tr>
+		  <th>No</th>
           <th>Nama</th>
           <th>Alamat</th>
           <th>No Hp</th>
@@ -31,8 +32,11 @@
         </tr>
         </thead>
         <tbody>
-          <?php foreach($all_users as $row): ?>
+          <?php 
+		  $no = 1;
+		  foreach($all_users as $row){?>
           <tr>
+			<td><?php echo $no++; ?></td>
             <td><?= $row['NAMA']; ?></td>
             <td><?= $row['ALAMAT']; ?></td>
             <td><?= $row['NO_HP']; ?></td>
@@ -40,7 +44,7 @@
             <td><span class="btn btn-primary btn-flat btn-xs"><?= ($row['LEVEL'] == 'admin')? 'admin': 'user'; ?><span></td>
             <td class="text-right"><a href="<?= base_url('admin/users/edit/'.$row['ID_USER_']); ?>" class="btn btn-info btn-flat <?= ($row['LEVEL'] == 'admin')? 'disabled': ''?>">Edit</a><a href="<?= base_url('admin/users/del/'.$row['ID_USER_']); ?>" class="btn btn-danger btn-flat <?= ($row['LEVEL'] == 'admin')? 'disabled': ''?>">Delete</a></td>
           </tr>
-          <?php endforeach; ?>
+          <?php } ?>
         </tbody>
        
       </table>

@@ -23,31 +23,32 @@
             <!-- /.box-header -->
             <!-- form start -->
             <form class="form-horizontal">
+			<?php echo form_open(base_url('admin/barang/add_jamur'), 'class="form-horizontal"');  ?> 
               <div class="box-body">
 				<div class="form-group">
-                  <label for="nama" class="col-sm-2 control-label">Nama</label>
+                  <label for="nama" name="nama" class="col-sm-2 control-label">Nama</label>
 
                   <div class="col-sm-10">
                     <input type="text" disabled value="Jamur" class="form-control" id="nama_jamur" placeholder>
                   </div>
-                </div>
+                </div> 
                 <div class="form-group">
-                  <label for="stok" class="col-sm-2 control-label">Stok</label>
+                  <label for="stok" name="stok" class="col-sm-2 control-label">Stok</label>
 
                   <div class="col-sm-10">
-                    <input type="stok" class="form-control" id="stok_jamur" placeholder>
+                    <input type="number" min="0" oninput="validity.valid||(value='');" class="form-control" id="stok_jamur" placeholder>
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="harga" class="col-sm-2 control-label">Harga</label>
 
                   <div class="col-sm-10">
-                    <input type="number" min="0" oninput="validity.valid||(value='');" class="form-control" id="harga_jamur" placeholder>
+                    <input type="number" min="0" oninput="validity.valid||(value='');" name="harga" class="form-control" id="harga_jamur" placeholder>
                   </div>
                 </div>
               </div>
               <div class="box-footer">
-                <button type="submit" class="btn btn-info pull-right">Tambah</button>
+                <button type="submit" name="btn_submit" class="btn btn-info pull-right">Tambah</button>
               </div>
             </form>
           </div>

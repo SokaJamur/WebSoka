@@ -17,7 +17,7 @@
               </div>
             <?php endif; ?>
            
-            <?php echo form_open(base_url('admin/Dashboard/add'), 'class="form-horizontal"');  ?> 
+            <?php echo form_open(base_url('admin/dashboard/add'), 'class="form-horizontal"');  ?> 
               <div class="form-group">
                 <label for="judul" class="col-sm-2 control-label">Judul</label>
 

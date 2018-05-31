@@ -10,7 +10,6 @@ class barang_model extends CI_Model{
 		$query = $this->db->get('barang');
 		return $result = $query->result_array();
 	}
-	
 	function get_pesan(){
 		$this->db->select('pesanan.*, user.NAMA, user.ALAMAT, barang.NAMA_BARANG');
 		$this->db->from('pesanan');
@@ -35,6 +34,11 @@ class barang_model extends CI_Model{
 		$this->db->join('barang', 'barang.ID_BARANG = pesanan.ID_BARANG');
 		$query = $this->db->get();
 		return $result = $query->result_array();
+	}
+	function tambah($data, $id){
+		$this->db->where('ID_BARANG', $id);
+		$this->db->update('pesanan', $data);
+		return true;
 	}
 }
 

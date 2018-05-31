@@ -21,11 +21,9 @@
           <div class="box">
             <div class="box-header">
               <h3 class="box-title">Detail Pesanan</h3>
+			  <a href="<?= base_url('admin/pesanan/'); ?>" class="btn btn-danger btn-left">Tutup</a>
             </div>
-            <!-- /.box-header -->
             <div class="box-body">
-			
-			
         <table id="example1" class="table table-bordered table-striped ">
         <thead>
         <tr>
@@ -38,7 +36,6 @@
 		  <th>Tgl Kirim</th>
           <th>Total</th>
 		  <th>Status</th>
-          <th>Option</th>
         </tr>
         </thead>
         <tbody>
@@ -53,7 +50,6 @@
 			<td><?= $row['TGL_KIRIM']; ?></td>
 			<td><?= $row['TOTAL']; ?></td>
 			<td>Status</td>
-			<td class="text-center"><a href="<?= base_url('admin/pesanan/'); ?>" class="btn btn-info btn-flat">Tutup</a></td>
           </tr>
           <?php endforeach; ?>
         </tbody>

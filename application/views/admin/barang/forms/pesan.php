@@ -42,13 +42,13 @@
 		  foreach($pesan as $row){
 		  ?>
           <tr>
-			<td><?$no?></td>
+			<td><?php echo $no++; ?></td>
             <td><?= $row['NAMA'];?></td>
             <td><?= $row['ALAMAT']; ?></td>
             <td><?= $row['NAMA_BARANG']; ?></td>
             <td><?= $row['JUMLAH_PESANAN']; ?></td>
 			<td><?= $row['TOTAL']; ?></td>
-			<td>status</td>
+			<td class="text-center"><a href="<?//= base_url('admin/pesanan/detail_/'.$row['ID_PESAN']); ?>" class="btn btn-info btn-flat">Terkirim</></td>
 			<td class="text-center"><a href="<?= base_url('admin/pesanan/detail_/'.$row['ID_PESAN']); ?>" class="btn btn-info btn-flat">Detail</a></td>
           </tr>
 		  <?php } ?>

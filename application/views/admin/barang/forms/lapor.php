@@ -4,7 +4,7 @@
 <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Data Laporan Penjualan
+        Laporan Penjualan
         <small>SOKA Jamur</small>
       </h1>
       <ol class="breadcrumb">
@@ -19,7 +19,7 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Data Table With Full Features</h3>
+              <h3 class="box-title">Data Laporan</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -35,13 +35,15 @@
 		  <th>Tgl Pesan</th>
 		  <th>Tgl Kirim</th>
           <th>Total</th>
-		  <th>Status</th>
         </tr>
         </thead>
         <tbody>
-          <?php foreach($lapor as $row): ?>
+          <?php 
+		  $no = 1;
+		  foreach($lapor as $row){
+		  ?>
           <tr>
-			<td>no</td>
+			<td><?php echo $no++; ?></td>
             <td><?= $row['NAMA'];?></td>
             <td><?= $row['ALAMAT']; ?></td>
 			<td><?= $row['NO_HP']; ?></td>
@@ -50,9 +52,8 @@
 			<td><?= $row['TGL_PESAN']; ?></td>
 			<td><?= $row['TGL_KIRIM']; ?></td>
 			<td><?= $row['TOTAL']; ?></td>
-			<td>Status</td>
           </tr>
-          <?php endforeach; ?>
+		  <?php } ?>
         </tbody>
        
       </table>

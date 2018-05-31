@@ -86,10 +86,10 @@
 						'GAMBAR' => $this->input->post('gambar')
 					);
 					$data = $this->security->xss_clean($data);
-					$result = $this->user_model->edit_user($data, $id);
+					$result = $this->artikel_model->edit($data, $id);
 					if($result){
 						$this->session->set_flashdata('msg', 'Artikel Berhasil diedit !');
-						redirect(base_url('admin/users'));
+						redirect(base_url('admin/dasboard'));
 					}
 				}
 			}
