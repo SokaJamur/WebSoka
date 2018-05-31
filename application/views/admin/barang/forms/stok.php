@@ -14,47 +14,11 @@
     <section class="content">
       <div class="row">
         <!-- left column -->
-        <div class="col-md-6">
-          <!-- general form elements -->
         <div class="box box-info">
-            <div class="box-header with-border">
-              <h3 class="box-title">JAMUR</h3>
-            </div>
-            <!-- /.box-header -->
-            <!-- form start -->
-            <form class="form-horizontal">
-			<?php echo form_open(base_url('admin/barang/add_jamur'), 'class="form-horizontal"');  ?> 
-              <div class="box-body">
-				<div class="form-group">
-                  <label for="nama" name="nama" class="col-sm-2 control-label">Nama</label>
-
-                  <div class="col-sm-10">
-                    <input type="text" disabled value="Jamur" class="form-control" id="nama_jamur" placeholder>
-                  </div>
-                </div> 
-                <div class="form-group">
-                  <label for="stok" name="stok" class="col-sm-2 control-label">Stok</label>
-
-                  <div class="col-sm-10">
-                    <input type="number" min="0" oninput="validity.valid||(value='');" class="form-control" id="stok_jamur" placeholder>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="harga" class="col-sm-2 control-label">Harga</label>
-
-                  <div class="col-sm-10">
-                    <input type="number" min="0" oninput="validity.valid||(value='');" name="harga" class="form-control" id="harga_jamur" placeholder>
-                  </div>
-                </div>
-              </div>
-              <div class="box-footer">
-                <button type="submit" name="btn_submit" class="btn btn-info pull-right">Tambah</button>
-              </div>
-            </form>
           </div>
 		  <div class="box box-info">
             <div class="box-header with-border">
-              <h3 class="box-title">Data Jamur</h3>
+              <h3 class="box-title">Data Barang</h3>
             </div>
 		<div class="box-body table-responsive">
 			<table id="jamur" class="table table-bordered table-striped ">
@@ -63,87 +27,23 @@
 				<th>Nama Barang</th>
 				<th>Stok</th>
 				<th>Harga</th>
+				<th class="text-center">Option</th>
 			</tr>
 			</thead>
 			<tbody>
-			<?php foreach($barang_jamur as $row): ?>
+			<?php foreach($barang_ as $row): ?>
 			<tr>
 				<td><?= $row['NAMA_BARANG']; ?></td>
 				<td><?= $row['STOK']; ?></td>
 				<td><?= $row['HARGA']; ?></td>
+				<td class="text-center"><a href="<?= base_url('admin/barang/add_stok/'.$row['ID_BARANG']); ?>" class="btn btn-info btn-flat">Tambah Stok</a></td>
 			</tr>
 			<?php endforeach; ?>
 			</tbody>
 			</table>
 		</div>
 		</div>
-
         </div>
-        <div class="col-md-6">
-          <!-- Horizontal Form -->
-          <div class="box box-info">
-            <div class="box-header with-border">
-              <h3 class="box-title">BAGLOG</h3>
-            </div>
-            <!-- /.box-header -->
-            <!-- form start -->
-            <form class="form-horizontal">
-              <div class="box-body">
-				<div class="form-group">
-                  <label for="nama" class="col-sm-2 control-label">Nama</label>
-
-                  <div class="col-sm-10">
-                    <input type="text" disabled value="Baglog" class="form-control" id="nama_baglog" placeholder>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="stok" class="col-sm-2 control-label">Stok</label>
-
-                  <div class="col-sm-10">
-                    <input type="stok" class="form-control" id="stok_baglog" placeholder>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="harga" class="col-sm-2 control-label">Harga</label>
-
-                  <div class="col-sm-10">
-                    <input type="number" min="0" oninput="validity.valid||(value='');" class="form-control" id="harga_baglog" placeholder>
-                  </div>
-                </div>
-              </div>
-			   <div class="box-footer">
-                <button type="submit" class="btn btn-info pull-right">Tambah</button>
-              </div>
-            </form>
-          </div>
-		  <div class="box box-info">
-            <div class="box-header with-border">
-              <h3 class="box-title">Data Baglog</h3>
-            </div>
-			<div class="box-body table-responsive">
-			<table id="jamur" class="table table-bordered table-striped ">
-			<thead>
-			<tr>
-				<th>Nama Barang</th>
-				<th>Stok</th>
-				<th>Harga</th>
-			</tr>
-			</thead>
-			<tbody>
-			<?php foreach($barang_baglog as $row): ?>
-			<tr>
-				<td><?= $row['NAMA_BARANG']; ?></td>
-				<td><?= $row['STOK']; ?></td>
-				<td><?= $row['HARGA']; ?></td>
-			</tr>
-			<?php endforeach; ?>
-			</tbody>
-       
-			</table>
-		</div>
-		</div>
-        </div>
-      </div>
     </section>
     <script>
   $("#forms").addClass('active');

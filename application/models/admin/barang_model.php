@@ -1,12 +1,6 @@
 <?php
 class barang_model extends CI_Model{
-	function get_jamur(){
-		$this->db->where('NAMA_BARANG', 'Jamur');
-		$query = $this->db->get('barang');
-		return $result = $query->result_array();
-	}
-	function get_baglog(){
-		$this->db->where('NAMA_BARANG', 'Baglog');
+	function get_barang(){
 		$query = $this->db->get('barang');
 		return $result = $query->result_array();
 	}
@@ -37,8 +31,12 @@ class barang_model extends CI_Model{
 	}
 	function tambah($data, $id){
 		$this->db->where('ID_BARANG', $id);
-		$this->db->update('pesanan', $data);
+		$this->db->update('barang', $data);
 		return true;
+	}
+	function get_by_id($id){
+		$query = $this->db->get_where('barang', array('ID_BARANG' => $id));
+		return $result = $query->row_array();
 	}
 }
 
