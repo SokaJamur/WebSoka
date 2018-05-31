@@ -38,6 +38,11 @@ class barang_model extends CI_Model{
 		$query = $this->db->get_where('barang', array('ID_BARANG' => $id));
 		return $result = $query->row_array();
 	}
+	function total_laporan(){
+        $this->db->select_sum('TOTAL');
+        $query = $this->db->get('pesanan');
+        return $query->result();
+    }
 }
 
 ?>

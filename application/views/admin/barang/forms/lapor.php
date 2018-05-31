@@ -23,6 +23,7 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
+			<h4><b>TOTAL PENJUALAN <?php foreach ($ttlbrg as $key => $value) { echo $this->fungsi->rupiah($value->TOTAL); } ?></b></h4><br><br>
         <table id="example1" class="table table-bordered table-striped ">
         <thead>
         <tr>
@@ -59,7 +60,6 @@
       </table>
             </div>
           </div>
-		  TOTAL PENJUALAN
         </div>
         <!-- /.col -->
       </div>
