@@ -43,6 +43,16 @@ class barang_model extends CI_Model{
         $query = $this->db->get('pesanan');
         return $query->result();
     }
+	function cari($awal, $akhir){
+		$this->db->select('pesanan.*, user.NAMA, user.ALAMAT, user.NO_HP, barang.NAMA_BARANG');
+		$this->db->from('pesanan');
+		$this->db->join('user', 'user.ID_USER_ = pesanan.ID_USER');
+		$this->db->join('barang', 'barang.ID_BARANG = pesanan.ID_BARANG');
+		$this->db->where('TGL_PESAN >=',$awal);
+		$this->db->where('TGL_PESAN <=',$akhir);
+		$query = $this->db->get();
+		return $result = $query->result_array();
+	}
 }
 
 ?>

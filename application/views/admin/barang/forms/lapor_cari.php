@@ -23,11 +23,32 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-			Dari Tanggal
-			<input name="awal" type="date"></input>
-			Sampai Tanggal
-			<input name="akhir" type="date"></input>
-	<a href="<?//= base_url('admin/laporan/cari_data'); ?>" class="btn btn-info btn-flat">Cari</a>
+			Bulan
+			<select name="bulan">
+			<option value="01">Januari</option>
+			<option value="02">Februari</option>
+			<option value="03">Maret</option>
+			<option value="04">April</option>
+			<option value="05">Mei</option>
+			<option value="06">Juni</option>
+			<option value="07">Juli</option>
+			<option value="08">Agustus</option>
+			<option value="09">September</option>
+			<option value="10">Oktober</option>
+			<option value="12">November</option>
+			<option value="12">Desember</option>
+			</select>
+			Tahun
+			<select name="tahun">
+			<?php
+			$mulai= date('Y');
+			for($i = $mulai;$i<$mulai + 50;$i++){
+			$sel = $i == date('Y') ? ' selected="selected"' : '';
+			echo '<option value="'.$i.'"'.$sel.'>'.$i.'</option>';
+			}
+			?>
+			</select>
+			<a href="<?= base_url('admin/laporan/cari_data'); ?>" class="btn btn-info btn-flat">Cari</a>
 			<br><br>
 			
         <table id="example1" class="table table-bordered table-striped ">

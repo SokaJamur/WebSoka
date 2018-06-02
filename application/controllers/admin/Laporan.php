@@ -11,8 +11,13 @@
 			$data['lapor'] =  $this->barang_model->get_laporan();
 			$data['ttlbrg'] = $this->barang_model->total_laporan();
 			$data['view'] = 'admin/barang/forms/lapor';
+			$this->load->view('admin/layout', $data);	
+		}
+		public function cari_data($bulan, $tahun){
+			$data['ttlbrg'] = $this->barang_model->total_laporan();
+			$data['lapor'] =  $this->barang_model->cari();
+			$data['view'] = 'admin/barang/forms/lapor';
 			$this->load->view('admin/layout', $data);
-			
 		}
 	}
 ?>
