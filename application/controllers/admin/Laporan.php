@@ -13,9 +13,10 @@
 			$data['view'] = 'admin/barang/forms/lapor';
 			$this->load->view('admin/layout', $data);	
 		}
-		public function cari_data($bulan, $tahun){
+		public function cari_data($tanggal){
+			$tanggal = $this->input->get('tanggal', TRUE); 
+			$data['tanggal'] = $this->barang_model->cari($tanggal);
 			$data['ttlbrg'] = $this->barang_model->total_laporan();
-			$data['lapor'] =  $this->barang_model->cari();
 			$data['view'] = 'admin/barang/forms/lapor';
 			$this->load->view('admin/layout', $data);
 		}

@@ -48,7 +48,7 @@
             <td><?= $row['NAMA_BARANG']; ?></td>
             <td><?= $row['JUMLAH_PESANAN']; ?></td>
 			<td><?= $row['TOTAL']; ?></td>
-			<td class="text-center"><a href="<?//= base_url('admin/pesanan/detail_/'.$row['ID_PESAN']); ?>" class="btn btn-info btn-flat">Terkirim</></td>
+			<td><?= $row['STATUS'];?></td>
 			<td class="text-center"><a href="<?= base_url('admin/pesanan/detail_/'.$row['ID_PESAN']); ?>" class="btn btn-info btn-flat">Detail</a></td>
           </tr>
 		  <?php } ?>

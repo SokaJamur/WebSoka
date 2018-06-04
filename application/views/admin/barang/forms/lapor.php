@@ -23,11 +23,11 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-			Dari Tanggal
-			<input name="awal" type="date"></input>
-			Sampai Tanggal
-			<input name="akhir" type="date"></input>
-	<a href="<?//= base_url('admin/laporan/cari_data'); ?>" class="btn btn-info btn-flat">Cari</a>
+			<form action="<?php echo base_url('admin/laporan/cari_data');?>" method="get">
+			Tanggal
+			<input name="tanggal" type="date"></input>
+			
+			</form>
 			<br><br>
 			
         <table id="example1" class="table table-bordered table-striped ">
