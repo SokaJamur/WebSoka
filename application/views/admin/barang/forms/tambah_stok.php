@@ -30,7 +30,7 @@
                   <label for="harga" class="col-sm-2 control-label">Harga</label>
 
                   <div class="col-sm-10">
-                    <input type="number" min="0" oninput="validity.valid||(value='');" name="harga" class="form-control" id="harga_jamur" placeholder>
+                    <input type="number" min="0" name="harga" oninput="validity.valid||(value='');" value="<?= $barang['HARGA']; ?>" class="form-control" id="harga_jamur" placeholder>
                   </div>
                 </div>
               <div class="form-group">

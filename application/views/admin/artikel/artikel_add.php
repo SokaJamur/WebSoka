@@ -17,7 +17,7 @@
               </div>
             <?php endif; ?>
            
-            <?php echo form_open(base_url('admin/dashboard/add'), 'class="form-horizontal"');  ?> 
+            <?php echo form_open_multipart(base_url('admin/dashboard/add'), 'class="form-horizontal"');  ?> 
               <div class="form-group">
                 <label for="judul" class="col-sm-2 control-label">Judul</label>
 
@@ -34,7 +34,7 @@
               <div class="form-group">
                 <label for="gambar" class="col-sm-2 control-label">Gambar</label>
                 <div class="col-sm-9">
-                  <input type="file" name="gambar" class="validate" id="gambar" placeholder="">
+                  <input type="file" name="gambar" class="file" id="gambar" placeholder="">
                 </div>
               </div>
               <div class="form-group">
@@ -53,5 +53,5 @@
 
 
 <script>
-$("#add_user").addClass('active');
+$("#artikel_add").addClass('active');
 </script>    

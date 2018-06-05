@@ -23,8 +23,7 @@
 				}
 				else{
 					$data = array(
-						'STOK' => $this->input->post('stok'),
-						'HARGA' => $this->input->post('harga'),	
+						'STOK' => $this->input->post('stok')
 					);
 					$result = $this->barang_model->tambah($data, $id);
 					if($result){

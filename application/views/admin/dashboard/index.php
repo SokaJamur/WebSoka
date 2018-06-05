@@ -82,7 +82,7 @@
           <?php foreach($all_artikel as $row): ?>
           <tr>
             <td><?= $row['JUDUL']; ?></td>
-            <td><img class="img-responsive" src="<?php echo base_url().'assets/img/'.$row['GAMBAR'];?>"></td>
+            <td><img class="img-responsive" src="<?php echo base_url().$row['GAMBAR'];?>"></td>
             <td><?= $row['TGL_ARTIKEL']; ?></td>
             <td class="text-center"><a href="<?= base_url('admin/Dashboard/edit/'.$row['ID_ARTIKEL']); ?>" class="btn btn-info btn-flat">Edit</a><a href="<?= base_url('admin/Dashboard/del/'.$row['ID_ARTIKEL']); ?>" class="btn btn-danger btn-flat">Delete</a></td>
           </tr>

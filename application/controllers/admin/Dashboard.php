@@ -15,19 +15,41 @@
 		}
 		
 		public function add(){
+		$dir = 'assets/img/';
+        $config['upload_path']      = 'assets/img/';
+        $config['allowed_types']    = 'jpg|png|jpeg';
+        $config['max_size']         = '2048';
+        $this->load->library('upload', $config);
+        $this->upload->initialize($config); 
+        if (!$this->upload->do_upload('gambar')) {
+			$data['view'] = 'admin/artikel/artikel_add';
+			$this->load->view('admin/layout', $data);
+		}else{
+        $data = array(
+            'JUDUL' => $this->input->post('judul'),
+            'ISI' => $this->input->post('isi'),
+            'GAMBAR' => $dir.$this->upload->data('file_name'),            
+        );
+        $this->db->insert('artikel',$data);
+		redirect(base_url('admin/Dashboard'));
+	}
+	
+		}
+		
+		public function add1(){
 		if($this->input->post('submit')){
-			$dir = '.assets/img/';
-			$config['upload_path'] = '.assets/img/';
-			$confiq['allowed_types'] = 'jpg|png|jpeg';
+			$config['upload_path'] = './assets/img/';
+			$config['allowed_types'] = 'jpg|png|jpeg';
 			
 			$this->load->library('upload', $config);
-			$this->upload->initialize($config);
+			//$this->upload->initialize($config);
 			
 				$data = array(
 				'JUDUL' => $this->input->post('judul'),
 				'ISI' => $this->input->post('isi'),
-				'GAMBAR' => $dir.$this->upload->data('')
-				);	
+				'GAMBAR' => $this->input->post('gambar')
+				);
+				$this->artikel_model->upload($data);
 				redirect(base_url('admin/Dashboard'));
 				
 			}
@@ -37,6 +59,7 @@
 			}
 		
 	}
+	
 		
 		public function edit($id = 0){
 			if($this->input->post('submit')){

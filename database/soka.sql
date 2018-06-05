@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 21, 2018 at 05:04 PM
+-- Generation Time: Jun 05, 2018 at 04:37 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 7.0.9
 
@@ -45,7 +45,10 @@ INSERT INTO `artikel` (`ID_ARTIKEL`, `ISI`, `GAMBAR`, `JUDUL`, `TGL_ARTIKEL`) VA
 (5, 'BAHAN\r\n150 gr jamur tiram putih\r\n\r\n3 siung bawang putih\r\n\r\n1 lembar daun salam\r\n\r\n1 ruas lengkuas\r\n\r\n1 ruas jahe\r\n\r\n1 batang sereh\r\n\r\nAir secukupnya\r\n\r\ngaram\r\n\r\ngula\r\n\r\nlada putih\r\n\r\nINSTRUKSI\r\nSobek – sobek jamur sesuai keinginan\r\n\r\nSlice bawang putih\r\n\r\nGeprek lengkuas, jahe dan sereh lalu saute hingga harum dan tambahkan bawang putih dan daun salam\r\n\r\nMasukan jamur aduk – aduk sebentar dan tambahkan air\r\n\r\nMasak hingga matang dan tambahkan garam , gula dan lada secukupnya\r\n\r\nSiap disajikan', 'tumis.png', 'Tumis Jamur Tiram', '2018-05-21 12:43:51'),
 (6, 'Bahan-Bahan :\r\nJamur tiram segar 2.5 kg\r\nTepung beras 1/2 kg\r\nTeung terigu 1 kg\r\nTeung maizena 200 g\r\nMinyak goreng 2 liter\r\nBumbu yang dihaluskan (bawang putih goreng, garam, dana lada)\r\n\r\nCara Membuat :\r\n1. Jamur tiram segar dicuci bersih, dipotong-potong kemudian dikukus selama 10 menit dan peras airnya\r\n2. Jamur dicampur dengan bumbu yang sudah dihaluskan\r\n3. Tepung beras, tepung teigu dan tepung maizena dicampur hingga rata\r\n4. Jamur dimasukkan dalam adonan tepung, kemudian diayak agar terpisah dengan tepungnya\r\n5. Jamur yang terpisah dari tepungnya kemudian digoreng hingga kering\r\n6. Tiriskan dan siap dinikmati', 'krispi2.jpg', 'Jamur Tiram Krispi', '2018-05-21 12:56:18'),
 (7, 'snbkjsdlnflk', 'nugget.jpg', 'Nugget Jamur Tiram', '2018-05-21 12:57:11'),
-(8, 'dsffklewklfeklwnfiwe', 'bakso.jpg', 'Bakso Jamur Tiram', '2018-05-21 14:09:10');
+(8, 'dsffklewklfeklwnfiwe', 'bakso.jpg', 'Bakso Jamur Tiram', '2018-05-21 14:09:10'),
+(60, 'nkjfnwns', 'assets/img/', 'nvnslk', '2018-06-04 14:58:38'),
+(61, 'yayay', 'assets/img/', 'yayay', '2018-06-04 16:01:37'),
+(62, 'oioio', '.assets/img/Array', 'oioi', '2018-06-04 16:03:26');
 
 -- --------------------------------------------------------
 
@@ -65,8 +68,8 @@ CREATE TABLE `barang` (
 --
 
 INSERT INTO `barang` (`ID_BARANG`, `NAMA_BARANG`, `STOK`, `HARGA`) VALUES
-('B001', 'Baglog', 7000, 13000),
-('J001', 'Jamur', 200, 2500);
+('B001', 'Baglog', 5000, 2500),
+('J001', 'Jamur', 3, 13000);
 
 -- --------------------------------------------------------
 
@@ -81,15 +84,17 @@ CREATE TABLE `pesanan` (
   `TGL_KIRIM` date DEFAULT NULL,
   `TGL_PESAN` date DEFAULT NULL,
   `ID_BARANG` varchar(8) NOT NULL,
-  `ID_USER` int(11) NOT NULL
+  `ID_USER` int(11) NOT NULL,
+  `STATUS` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `pesanan`
 --
 
-INSERT INTO `pesanan` (`ID_PESAN`, `JUMLAH_PESANAN`, `TOTAL`, `TGL_KIRIM`, `TGL_PESAN`, `ID_BARANG`, `ID_USER`) VALUES
-(1, 20, 50000, '2018-04-28', '2018-04-20', 'B001', 2);
+INSERT INTO `pesanan` (`ID_PESAN`, `JUMLAH_PESANAN`, `TOTAL`, `TGL_KIRIM`, `TGL_PESAN`, `ID_BARANG`, `ID_USER`, `STATUS`) VALUES
+(1, 20, 50000, '2018-04-28', '2018-04-20', 'B001', 2, 'Terkirim'),
+(2, 10, 25000, '2018-05-31', '2018-05-29', 'B001', 2, 'Terkirim');
 
 -- --------------------------------------------------------
 
@@ -113,7 +118,7 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`ID_USER_`, `NAMA`, `ALAMAT`, `NO_HP`, `EMAIL`, `PASSWORD`, `LEVEL`) VALUES
 (1, 'Admin', 'Jember', '089909808707', 'admin@soka.com', '12345', 'admin'),
-(2, 'Deta', 'Jember', '085505606707', 'deta@gmail.com', '12345678', 'user');
+(2, 'Deta', 'JEMBER', '085505606707', 'deta@gmail.com', '12345678', 'user');
 
 --
 -- Indexes for dumped tables
@@ -153,7 +158,12 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `artikel`
 --
 ALTER TABLE `artikel`
-  MODIFY `ID_ARTIKEL` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `ID_ARTIKEL` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+--
+-- AUTO_INCREMENT for table `pesanan`
+--
+ALTER TABLE `pesanan`
+  MODIFY `ID_PESAN` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- Constraints for dumped tables
 --
