@@ -65,11 +65,13 @@
       </div>
       
       <div class="row">
+      <div class="box box-info">
+            <div class="box-header with-border">
+              <h3 class="box-title">Artikel</h3>
+            </div>
 		<div class="box-body table-responsive">
-		
-		<table id="example1" class="table table-bordered table-striped">
-		<h1>ARTIKEL</h1> 
-		<a style="width:15%;" href="<?= base_url('admin/Dashboard/add'); ?>" class="btn btn-info bg-purple"> Tambah Artikel <i class="fa fa-plus-square"></i></a>
+		<table class="table table-bordered table-striped">
+		<a style="width:15%;" href="<?= base_url('admin/Dashboard/add'); ?>" class="btn btn-info bg-purple"> Tambah Artikel <i class="fa fa-plus-square"></i></a><br>
         <thead>
         <tr>
           <th>Judul</th>
@@ -90,6 +92,7 @@
         </tbody>
 		</table>
 		</div>
+      </div>
       </div>
   
 

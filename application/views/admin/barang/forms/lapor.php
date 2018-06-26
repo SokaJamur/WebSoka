@@ -7,6 +7,8 @@
         Laporan Penjualan
         <small>SOKA Jamur</small>
       </h1>
+      <br>
+      <button onclick="window.print();">Cetak</button>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
         <li><a href="#">Laporan</a></li>
@@ -17,20 +19,21 @@
     <section class="content">
       <div class="row">
         <div class="col-xs-12">
+
           <div class="box">
             <div class="box-header">
               <h3 class="box-title">Data Laporan</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-			<form action="<?php echo base_url('admin/laporan/cari_data');?>" method="get">
-			Tanggal
-			<input name="tanggal" type="date"></input>
+      
 			
+      <form action="<?php echo base_url('admin/laporan/cari_data');?>" method="get">
+     <!-- Tanggal Awal <input name="tgl_awal" type="date"></input>
+      Tanggal Akhir <input name="tgl_akhir" type="date"></input>
+      <button name="cari">Cari</button> -->
 			</form>
-			<br><br>
-			
-        <table id="example1" class="table table-bordered table-striped ">
+        <table class="table table-bordered table-striped ">
         <thead>
         <tr>
 		  <th>No</th>
@@ -64,7 +67,8 @@
         </tbody>
        
       </table>
-	  <h4><b>TOTAL PENJUALAN <?php foreach ($ttlbrg as $key => $value) { echo $this->fungsi->rupiah($value->TOTAL); } ?></b></h4><br><br>
+	  <br>
+	  <h4><b>TOTAL PENJUALAN KESELURUHAN <?php foreach ($ttlbrg as $key => $value) { echo $this->fungsi->rupiah($value->TOTAL); } ?></b></h4><br><br>
             </div>
           </div>
         </div>

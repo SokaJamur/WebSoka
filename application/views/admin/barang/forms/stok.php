@@ -13,15 +13,12 @@
     <!-- Main content -->
     <section class="content">
       <div class="row">
-        <!-- left column -->
-        <div class="box box-info">
-          </div>
 		  <div class="box box-info">
             <div class="box-header with-border">
               <h3 class="box-title">Data Barang</h3>
             </div>
 		<div class="box-body table-responsive">
-			<table id="jamur" class="table table-bordered table-striped ">
+			<table class="table table-bordered table-striped ">
 			<thead>
 			<tr>
 				<th>Nama Barang</th>

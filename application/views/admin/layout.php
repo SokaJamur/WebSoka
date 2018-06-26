@@ -54,7 +54,7 @@
 				<!--main content end-->
 				<!--footer start-->
 				<footer class="main-footer">
-					<strong>Copyright © 2018 <a href="#">SOKA Jamur</a></strong> TIF'16-C
+					<strong><a href="#">SOKA Jamur</a> 2018</strong> TIF'16-C
 				</footer>
 				<!--footer end-->
 			</section>
