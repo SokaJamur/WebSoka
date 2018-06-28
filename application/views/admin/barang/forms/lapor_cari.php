@@ -1,11 +1,25 @@
 <link rel="stylesheet" href="<?= base_url() ?>public/plugins/datatables/dataTables.bootstrap.css">
 
+
+    <section class="content-header">
+      <h1>
+        Laporan Penjualan
+        <small>SOKA Jamur</small>
+      </h1><br>
+      <button onclick="window.print();">Cetak</button>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+        <li><a href="#">Laporan</a></li>
+      </ol>
+    </section>
     <section class="content">
       <div class="row">
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Data Laporan</h3>
+              <h3 class="box-title">Data Laporan <?php $tgl_awal = $this->input->get('tgl_awal', TRUE);
+      $tgl_akhir = $this->input->get('tgl_akhir', TRUE); echo "Tanggal ".$tgl_awal." Sampai ".$tgl_akhir;?></h3> 
+
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -30,6 +44,7 @@
 		  foreach($cari as $row){
 		  ?>
           <tr>
+          
 			<td><?php echo $no++; ?></td>
             <td><?= $row['NAMA'];?></td>
             <td><?= $row['ALAMAT']; ?></td>
@@ -44,7 +59,9 @@
         </tbody>
        
       </table>
-            </div>
+            <br>
+      <h4><b>TOTAL PENJUALAN<?php foreach ($ttlbrg as $row) { echo $this->fungsi->rupiah($row['TOTAL']); } ?></b></h4>            </div>
+
           </div>
         </div>
         <!-- /.col -->

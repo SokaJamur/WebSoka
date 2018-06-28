@@ -7,8 +7,6 @@
         Laporan Penjualan
         <small>SOKA Jamur</small>
       </h1>
-      <br>
-      <button onclick="window.print();">Cetak</button>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
         <li><a href="#">Laporan</a></li>
@@ -29,9 +27,9 @@
       
 			
       <form action="<?php echo base_url('admin/laporan/cari_data');?>" method="get">
-     <!-- Tanggal Awal <input name="tgl_awal" type="date"></input>
+     Tanggal Awal <input name="tgl_awal" type="date"></input>
       Tanggal Akhir <input name="tgl_akhir" type="date"></input>
-      <button name="cari">Cari</button> -->
+      <button>Cari</button> 
 			</form>
         <table class="table table-bordered table-striped ">
         <thead>

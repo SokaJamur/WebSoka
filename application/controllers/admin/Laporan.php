@@ -13,11 +13,13 @@
 			$data['view'] = 'admin/barang/forms/lapor';
 			$this->load->view('admin/layout', $data);	
 		}
-		public function cari_data($cari){
+		public function cari_data(){
 			$tgl_awal = $this->input->get('tgl_awal', TRUE);
 			$tgl_akhir = $this->input->get('tgl_akhir', TRUE);
-			$data['cari'] = $this->barang_model->cari($data);
+			$data['cari'] = $this->barang_model->cari($tgl_awal,$tgl_akhir );
+			$data['ttlbrg'] = $this->barang_model->total_($tgl_awal,$tgl_akhir );
 			$data['view'] = 'admin/barang/forms/lapor_cari';
+			$this->load->view('admin/layout', $data, $tgl_awal, $tgl_akhir);
 		}
 	}
 ?>
